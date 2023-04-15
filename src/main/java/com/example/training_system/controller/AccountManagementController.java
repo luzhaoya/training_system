@@ -8,6 +8,7 @@ import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpServletResponseWrapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -25,7 +26,7 @@ public class AccountManagementController {
     @Autowired
     private AccountManagement accountManagement;
     @RequestMapping(value = "/login", produces = "application/json; charset=utf-8")
-    public String login(Account account, HttpServletResponse res) {
+    public String login(@RequestBody Account account, HttpServletResponse res) {
         System.err.println(account.getAccount());
         var login = accountManagement.login(account);
         if (null != login){
