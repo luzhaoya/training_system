@@ -6,6 +6,7 @@ import java.lang.annotation.*;
 @Retention(RetentionPolicy.SOURCE)
 @Documented
 @Target(ElementType.FIELD)
-public @interface FieldBasisEnum {
-    Class<?> value();
+public @interface FieldInfo {
+    String value();
+    Class<?> basis() default Object.class;
 }
