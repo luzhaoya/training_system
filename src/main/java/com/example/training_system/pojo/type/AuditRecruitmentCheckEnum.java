@@ -1,12 +1,11 @@
 package com.example.training_system.pojo.type;
 
 /**
- * 企业认证审核状态枚举
- *
+ * 岗位审核状态枚举
  * @author luzhao
  * @date 2023/04/15
  */
-public enum EnterpriseCheckStatusEnum {
+public enum AuditRecruitmentCheckEnum {
     /**
      * 未审核
      */
@@ -22,7 +21,7 @@ public enum EnterpriseCheckStatusEnum {
     ;
     private final int value;
 
-    EnterpriseCheckStatusEnum(int value) {
+    AuditRecruitmentCheckEnum(int value) {
         this.value = value;
     }
 }

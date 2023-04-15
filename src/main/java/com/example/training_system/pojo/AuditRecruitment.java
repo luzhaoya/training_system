@@ -1,75 +1,87 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.training_system.annotate.FieldInfo;
+import com.example.training_system.pojo.type.AuditRecruitmentCheckEnum;
+
 import java.lang.Integer;
 import java.lang.String;
 
+/**
+ * 招聘信息审核实体
+ *
+ * @author luzhao
+ * @date 2023/04/15
+ */
+@TableName("t_audit_recruitment")
 public class AuditRecruitment {
 
-	protected String condition;
-	protected Integer post_id;
-	protected String post_name;
-	protected Integer id;
-	protected Integer enterprise_id;
-	protected String enterprise_name;
+	@TableId
+	private Integer id;
 
-	public AuditRecruitment() {
-	}
+	@FieldInfo("企业id")
+	private Integer enterpriseId;
 
-	public AuditRecruitment(String condition, Integer post_id, String post_name, Integer id, Integer enterprise_id, String enterprise_name) {
-		 this.condition = condition;
-		 this.post_id = post_id;
-		 this.post_name = post_name;
-		 this.id = id;
-		 this.enterprise_id = enterprise_id;
-		 this.enterprise_name = enterprise_name;
-	}
+	@FieldInfo("企业名称")
+	private String enterpriseName;
 
-	public String getCondition() {
-		return this.condition;
-	}
+	@FieldInfo("岗位id")
+	private Integer postId;
 
-	public void setCondition(String condition) {
-		 this.condition = condition;
-	}
+	@FieldInfo("岗位名称")
+	private String postName;
 
-	public Integer getPost_id() {
-		return this.post_id;
-	}
+	@FieldInfo(value = "审核状态", basis = AuditRecruitmentCheckEnum.class)
+	private String checkStatus;
 
-	public void setPost_id(Integer post_id) {
-		 this.post_id = post_id;
-	}
 
-	public String getPost_name() {
-		return this.post_name;
-	}
-
-	public void setPost_name(String post_name) {
-		 this.post_name = post_name;
-	}
 
 	public Integer getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		 this.id = id;
+		this.id = id;
 	}
 
-	public Integer getEnterprise_id() {
-		return this.enterprise_id;
+	public String getCheckStatus() {
+		return checkStatus;
 	}
 
-	public void setEnterprise_id(Integer enterprise_id) {
-		 this.enterprise_id = enterprise_id;
+	public void setCheckStatus(String checkStatus) {
+		this.checkStatus = checkStatus;
 	}
 
-	public String getEnterprise_name() {
-		return this.enterprise_name;
+	public Integer getPostId() {
+		return postId;
 	}
 
-	public void setEnterprise_name(String enterprise_name) {
-		 this.enterprise_name = enterprise_name;
+	public void setPostId(Integer postId) {
+		this.postId = postId;
 	}
 
+	public String getPostName() {
+		return postName;
+	}
+
+	public void setPostName(String postName) {
+		this.postName = postName;
+	}
+
+	public Integer getEnterpriseId() {
+		return enterpriseId;
+	}
+
+	public void setEnterpriseId(Integer enterpriseId) {
+		this.enterpriseId = enterpriseId;
+	}
+
+	public String getEnterpriseName() {
+		return enterpriseName;
+	}
+
+	public void setEnterpriseName(String enterpriseName) {
+		this.enterpriseName = enterpriseName;
+	}
 }

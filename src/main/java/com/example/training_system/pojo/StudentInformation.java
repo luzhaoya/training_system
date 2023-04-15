@@ -5,101 +5,85 @@ import java.lang.String;
 
 public class StudentInformation {
 
-	protected String college;
-	protected String project_experience;
-	protected String self_introduction;
-	protected String student_number;
-	protected String strong_point;
-	protected String sex;
-	protected String name;
-	protected String telephone;
-	protected Integer age;
+	private String studentNumber;
+	private String college;
+	private String projectExperience;
+	private String selfIntroduction;
+	private String strongPoint;
+	private String sex;
+	private String name;
+	private String telephone;
+	private Integer age;
 
-	public StudentInformation() {
+	public String getStudentNumber() {
+		return studentNumber;
 	}
 
-	public StudentInformation(String college, String project_experience, String self_introduction, String student_number, String strong_point, String sex, String name, String telephone, Integer age) {
-		 this.college = college;
-		 this.project_experience = project_experience;
-		 this.self_introduction = self_introduction;
-		 this.student_number = student_number;
-		 this.strong_point = strong_point;
-		 this.sex = sex;
-		 this.name = name;
-		 this.telephone = telephone;
-		 this.age = age;
+	public void setStudentNumber(String studentNumber) {
+		this.studentNumber = studentNumber;
 	}
 
 	public String getCollege() {
-		return this.college;
+		return college;
 	}
 
 	public void setCollege(String college) {
-		 this.college = college;
+		this.college = college;
 	}
 
-	public String getProject_experience() {
-		return this.project_experience;
+	public String getProjectExperience() {
+		return projectExperience;
 	}
 
-	public void setProject_experience(String project_experience) {
-		 this.project_experience = project_experience;
+	public void setProjectExperience(String projectExperience) {
+		this.projectExperience = projectExperience;
 	}
 
-	public String getSelf_introduction() {
-		return this.self_introduction;
+	public String getSelfIntroduction() {
+		return selfIntroduction;
 	}
 
-	public void setSelf_introduction(String self_introduction) {
-		 this.self_introduction = self_introduction;
+	public void setSelfIntroduction(String selfIntroduction) {
+		this.selfIntroduction = selfIntroduction;
 	}
 
-	public String getStudent_number() {
-		return this.student_number;
+	public String getStrongPoint() {
+		return strongPoint;
 	}
 
-	public void setStudent_number(String student_number) {
-		 this.student_number = student_number;
-	}
-
-	public String getStrong_point() {
-		return this.strong_point;
-	}
-
-	public void setStrong_point(String strong_point) {
-		 this.strong_point = strong_point;
+	public void setStrongPoint(String strongPoint) {
+		this.strongPoint = strongPoint;
 	}
 
 	public String getSex() {
-		return this.sex;
+		return sex;
 	}
 
 	public void setSex(String sex) {
-		 this.sex = sex;
+		this.sex = sex;
 	}
 
 	public String getName() {
-		return this.name;
+		return name;
 	}
 
 	public void setName(String name) {
-		 this.name = name;
+		this.name = name;
 	}
 
 	public String getTelephone() {
-		return this.telephone;
+		return telephone;
 	}
 
 	public void setTelephone(String telephone) {
-		 this.telephone = telephone;
+		this.telephone = telephone;
 	}
 
 	public Integer getAge() {
-		return this.age;
+		return age;
 	}
 
 	public void setAge(Integer age) {
-		 this.age = age;
+		this.age = age;
 	}
-
 }

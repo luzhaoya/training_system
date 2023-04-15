@@ -4,41 +4,31 @@ import java.lang.Integer;
 
 public class Syllabus {
 
-	protected Integer course_id;
-	protected Integer student_number;
-	protected Integer id;
-
-	public Syllabus() {
-	}
-
-	public Syllabus(Integer course_id, Integer student_number, Integer id) {
-		 this.course_id = course_id;
-		 this.student_number = student_number;
-		 this.id = id;
-	}
-
-	public Integer getCourse_id() {
-		return this.course_id;
-	}
-
-	public void setCourse_id(Integer course_id) {
-		 this.course_id = course_id;
-	}
-
-	public Integer getStudent_number() {
-		return this.student_number;
-	}
-
-	public void setStudent_number(Integer student_number) {
-		 this.student_number = student_number;
-	}
+	private Integer id;
+	private Integer courseId;
+	private Integer studentNumber;
 
 	public Integer getId() {
-		return this.id;
+		return id;
 	}
 
 	public void setId(Integer id) {
-		 this.id = id;
+		this.id = id;
 	}
 
+	public Integer getCourseId() {
+		return courseId;
+	}
+
+	public void setCourseId(Integer courseId) {
+		this.courseId = courseId;
+	}
+
+	public Integer getStudentNumber() {
+		return studentNumber;
+	}
+
+	public void setStudentNumber(Integer studentNumber) {
+		this.studentNumber = studentNumber;
+	}
 }
