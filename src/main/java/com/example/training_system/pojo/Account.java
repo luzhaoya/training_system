@@ -17,6 +17,7 @@ import javax.management.relation.RoleStatus;
 public class Account {
     @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
+    
     @FieldInfo("账号")
     private String account;
 
