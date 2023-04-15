@@ -1,5 +1,6 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.example.training_system.annotate.FieldInfo;
@@ -15,13 +16,14 @@ import java.lang.String;
  */
 @TableName("t_recruitment")
 public class Recruitment {
-	@TableId
+	@TableId(value = "id", type = IdType.AUTO)
 	private Integer id;
 
 	@FieldInfo("")
+	private String name;
+	@FieldInfo("")
 	private String technicalRequirement;
 	private String condition;
-	private String name;
 	private String postType;
 	private Integer salary;
 	private Integer enterpriseId;

@@ -1,5 +1,6 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
@@ -13,7 +14,7 @@ import com.example.training_system.pojo.type.EnterpriseCheckStatusEnum;
  */
 @TableName("t_enterprise_check")
 public class EnterpriseCheck {
-    @TableId
+    @TableId(value = "id", type = IdType.AUTO)
     private Integer id;
 
     @FieldInfo("企业id")
