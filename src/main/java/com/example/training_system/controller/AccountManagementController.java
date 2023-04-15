@@ -25,7 +25,7 @@ public class AccountManagementController {
     @Autowired
     private AccountManagement accountManagement;
     @RequestMapping(value = "/login", produces = "application/json; charset=utf-8")
-    public String login(HttpServletResponse res, Account account) {
+    public String login(Account account, HttpServletResponse res) {
         System.err.println(account.getAccount());
         var login = accountManagement.login(account);
         if (null != login){
