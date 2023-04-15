@@ -1,6 +1,7 @@
 package com.example.training_system.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.example.training_system.annotate.FieldInfo;
 import com.example.training_system.pojo.type.EnterpriseCheckStatusEnum;
@@ -10,9 +11,11 @@ import com.example.training_system.pojo.type.EnterpriseCheckStatusEnum;
  * @author luzhao
  * @date 2023/04/15
  */
-@TableName("enterprise_check")
+@TableName("t_enterprise_check")
 public class EnterpriseCheck {
+    @TableId
     private Integer id;
+
     @FieldInfo("企业id")
     private String enterpriseId;
 
