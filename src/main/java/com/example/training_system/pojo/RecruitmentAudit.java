@@ -1,18 +1,35 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.training_system.annotate.FieldInfo;
+
 import java.lang.Integer;
 import java.lang.String;
 
-public class RecruitmentAudit {
 
+/**
+ * 企业招聘表
+ * @author luzhao
+ * @date 2023/04/15
+ */
+@TableName("t_recruitment_audit")
+public class RecruitmentAudit {
+	@TableId(value = "id", type = IdType.AUTO)
 	private Integer id;
+
+	@FieldInfo("学生名称")
 	private String studentName;
 	private String recruitName;
-	private String condition;
+
 	private Integer studentNumber;
 	private Integer enterpriseId;
 	private String enterpriseName;
 	private Integer recruitId;
+
+	@FieldInfo("")
+	private String status;
 
 	public Integer getId() {
 		return id;
@@ -38,12 +55,12 @@ public class RecruitmentAudit {
 		this.recruitName = recruitName;
 	}
 
-	public String getCondition() {
-		return condition;
+	public String getStatus() {
+		return status;
 	}
 
-	public void setCondition(String condition) {
-		this.condition = condition;
+	public void setStatus(String status) {
+		this.status = status;
 	}
 
 	public Integer getStudentNumber() {

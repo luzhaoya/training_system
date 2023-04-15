@@ -19,16 +19,27 @@ public class Recruitment {
 	@TableId(value = "id", type = IdType.AUTO)
 	private Integer id;
 
-	@FieldInfo("")
+	@FieldInfo("岗位名称")
 	private String name;
-	@FieldInfo("")
-	private String technicalRequirement;
-	private String condition;
+
+	@FieldInfo("岗位类型")
 	private String postType;
-	private Integer salary;
-	private Integer enterpriseId;
+
+	@FieldInfo("工作地点")
 	private String workplace;
+
+	@FieldInfo("日薪")
+	private Integer salary;
+
+	@FieldInfo("岗位要求")
+	private String technicalRequirement;
+
+	@FieldInfo("企业id")
+	private Integer enterpriseId;
+
+	@FieldInfo("企业名称")
 	private String enterpriseName;
+
 
 	public Integer getId() {
 		return id;
@@ -44,14 +55,6 @@ public class Recruitment {
 
 	public void setTechnicalRequirement(String technicalRequirement) {
 		this.technicalRequirement = technicalRequirement;
-	}
-
-	public String getCondition() {
-		return condition;
-	}
-
-	public void setCondition(String condition) {
-		this.condition = condition;
 	}
 
 	public String getName() {

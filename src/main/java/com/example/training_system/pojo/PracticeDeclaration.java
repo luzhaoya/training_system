@@ -36,7 +36,7 @@ public class PracticeDeclaration {
 	@FieldInfo("岗位名称")
 	private String postName;
 
-	@FieldInfo("实习审核状态")
+	@FieldInfo("实习申请审核状态")
 	private String checkStatus;
 
 	public Integer getId() {
