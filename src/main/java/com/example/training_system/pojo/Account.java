@@ -3,6 +3,9 @@ package com.example.training_system.pojo;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.example.training_system.annotate.FieldInfo;
+import com.example.training_system.pojo.type.RoleEnum;
+
+import javax.management.relation.RoleStatus;
 
 /**
  * 账户
@@ -19,7 +22,7 @@ public class Account {
     @FieldInfo("密码")
     private String password;
 
-    @FieldInfo("角色")
+    @FieldInfo(value = "角色", basis = RoleEnum.class)
     private String role;
 
     @FieldInfo("对应的实体的id")

@@ -1,17 +1,35 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.example.training_system.annotate.FieldInfo;
+
 import java.lang.Integer;
 import java.lang.String;
 
+/**
+ * 企业信息
+ * @author luzhao
+ * @date 2023/04/15
+ */
 public class EnterpriseInformation {
 
+	@TableId
 	private Integer id;
-	private String condition;
-	private String address;
+
+	@FieldInfo("企业名称")
 	private String name;
-	private String mainBusiness;
-	private String Scale;
+	@FieldInfo("企业地址")
+	private String address;
+
+	@FieldInfo("联系电话")
 	private String contactNumber;
+
+	@FieldInfo("企业规模")
+	private String scale;
+	@FieldInfo("主营业务")
+	private String mainBusiness;
+
+	@FieldInfo("")
 	private String corporateRepresentative;
 
 	public Integer getId() {
@@ -20,14 +38,6 @@ public class EnterpriseInformation {
 
 	public void setId(Integer id) {
 		this.id = id;
-	}
-
-	public String getCondition() {
-		return condition;
-	}
-
-	public void setCondition(String condition) {
-		this.condition = condition;
 	}
 
 	public String getAddress() {
@@ -54,12 +64,13 @@ public class EnterpriseInformation {
 		this.mainBusiness = mainBusiness;
 	}
 
+
 	public String getScale() {
-		return Scale;
+		return scale;
 	}
 
 	public void setScale(String scale) {
-		Scale = scale;
+		this.scale = scale;
 	}
 
 	public String getContactNumber() {
