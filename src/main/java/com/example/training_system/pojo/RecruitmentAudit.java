@@ -4,6 +4,7 @@ import com.baomidou.mybatisplus.annotation.IdType;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
 import com.example.training_system.annotate.FieldInfo;
+import com.example.training_system.pojo.type.RecruitmentAuditStatusEnum;
 
 import java.lang.Integer;
 import java.lang.String;
@@ -18,17 +19,25 @@ import java.lang.String;
 public class RecruitmentAudit {
 	@TableId(value = "id", type = IdType.AUTO)
 	private Integer id;
-
 	@FieldInfo("学生名称")
 	private String studentName;
-	private String recruitName;
 
+	@FieldInfo("学生编号")
 	private Integer studentNumber;
+
+	@FieldInfo("企业id")
 	private Integer enterpriseId;
+
+	@FieldInfo("企业名称")
 	private String enterpriseName;
+
+	@FieldInfo("岗位id")
 	private Integer recruitId;
 
-	@FieldInfo("")
+	@FieldInfo("岗位名称")
+	private String recruitName;
+
+	@FieldInfo(value = "流程状态", basis = RecruitmentAuditStatusEnum.class)
 	private String status;
 
 	public Integer getId() {

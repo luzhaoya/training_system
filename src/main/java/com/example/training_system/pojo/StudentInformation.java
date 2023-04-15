@@ -1,19 +1,49 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.training_system.annotate.FieldInfo;
+
 import java.lang.Integer;
 import java.lang.String;
 
+/**
+ * 学生信息
+ * @author luzhao
+ * @date 2023/04/15
+ */
+@TableName("t_student_information")
 public class StudentInformation {
-
+	@TableId(value = "student_number")
 	private String studentNumber;
-	private String college;
-	private String projectExperience;
-	private String selfIntroduction;
-	private String strongPoint;
-	private String sex;
+
+	@FieldInfo("学生姓名")
 	private String name;
-	private String telephone;
+
+	@FieldInfo("学生年龄")
 	private Integer age;
+
+	@FieldInfo("联系电话")
+	private String telephone;
+
+	@FieldInfo("性别")
+	private String sex;
+
+	@FieldInfo("学院")
+	private String college;
+
+	@FieldInfo("特长")
+	private String projectExperience;
+
+	@FieldInfo("项目经历")
+	private String selfIntroduction;
+
+	@FieldInfo("自我介绍")
+	private String strongPoint;
+
+	@FieldInfo("专业")
+	private String major;
 
 	public String getStudentNumber() {
 		return studentNumber;
@@ -85,5 +115,13 @@ public class StudentInformation {
 
 	public void setAge(Integer age) {
 		this.age = age;
+	}
+
+	public String getMajor() {
+		return major;
+	}
+
+	public void setMajor(String major) {
+		this.major = major;
 	}
 }

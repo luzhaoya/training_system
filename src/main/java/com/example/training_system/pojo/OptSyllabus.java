@@ -1,11 +1,26 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.IdType;
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.training_system.annotate.FieldInfo;
+
 import java.lang.Integer;
 
-public class Syllabus {
-
+/**
+ * 选课实体
+ * @author luzhao
+ * @date 2023/04/15
+ */
+@TableName("t_opt_syllabus")
+public class OptSyllabus {
+	@TableId(value = "id", type = IdType.AUTO)
 	private Integer id;
+
+	@FieldInfo("课程id")
 	private Integer courseId;
+
+	@FieldInfo("学生学号")
 	private Integer studentNumber;
 
 	public Integer getId() {
