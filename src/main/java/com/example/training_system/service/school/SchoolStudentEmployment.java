@@ -1,4 +1,4 @@
-package com.example.training_system.service;
+package com.example.training_system.service.school;
 
 /**
  * 学校学生工作跟踪
