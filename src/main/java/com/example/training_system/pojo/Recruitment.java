@@ -1,11 +1,24 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.training_system.annotate.FieldInfo;
+
 import java.lang.Integer;
 import java.lang.String;
 
-public class Recruitment {
 
+/**
+ * 招聘信息表
+ * @author luzhao
+ * @date 2023/04/15
+ */
+@TableName("t_recruitment")
+public class Recruitment {
+	@TableId
 	private Integer id;
+
+	@FieldInfo("")
 	private String technicalRequirement;
 	private String condition;
 	private String name;

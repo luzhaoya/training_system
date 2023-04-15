@@ -16,7 +16,6 @@ import java.lang.String;
  */
 @TableName("t_audit_recruitment")
 public class AuditRecruitment {
-
 	@TableId
 	private Integer id;
 

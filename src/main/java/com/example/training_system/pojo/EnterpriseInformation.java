@@ -1,6 +1,7 @@
 package com.example.training_system.pojo;
 
 import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
 import com.example.training_system.annotate.FieldInfo;
 
 import java.lang.Integer;
@@ -11,13 +12,14 @@ import java.lang.String;
  * @author luzhao
  * @date 2023/04/15
  */
+@TableName("t_enterprise_information")
 public class EnterpriseInformation {
-
 	@TableId
 	private Integer id;
 
 	@FieldInfo("企业名称")
 	private String name;
+
 	@FieldInfo("企业地址")
 	private String address;
 
@@ -26,10 +28,11 @@ public class EnterpriseInformation {
 
 	@FieldInfo("企业规模")
 	private String scale;
+
 	@FieldInfo("主营业务")
 	private String mainBusiness;
 
-	@FieldInfo("")
+	@FieldInfo("法人代表")
 	private String corporateRepresentative;
 
 	public Integer getId() {

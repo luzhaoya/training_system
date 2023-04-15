@@ -1,18 +1,42 @@
 package com.example.training_system.pojo;
 
+import com.baomidou.mybatisplus.annotation.TableId;
+import com.baomidou.mybatisplus.annotation.TableName;
+import com.example.training_system.annotate.FieldInfo;
+
 import java.lang.Integer;
 import java.lang.String;
 
+/**
+ * 实习申请表
+ * @author luzhao
+ * @date 2023/04/15
+ */
+@TableName("t_practice_declaration")
 public class PracticeDeclaration {
-
+	@TableId
 	private Integer id;
-	private String studentName;
-	private String condition;
-	private Integer studentNumber;
-	private Integer postId;
-	private String postName;
+
+	@FieldInfo("企业id")
 	private Integer enterpriseId;
+
+	@FieldInfo("企业名称")
 	private String enterpriseName;
+
+	@FieldInfo("学号")
+	private Integer studentNumber;
+
+	@FieldInfo("学生姓名")
+	private String studentName;
+
+	@FieldInfo("岗位id")
+	private Integer postId;
+
+	@FieldInfo("岗位名称")
+	private String postName;
+
+	@FieldInfo("实习审核状态")
+	private String checkStatus;
 
 	public Integer getId() {
 		return id;
@@ -30,12 +54,12 @@ public class PracticeDeclaration {
 		this.studentName = studentName;
 	}
 
-	public String getCondition() {
-		return condition;
+	public String getCheckStatus() {
+		return checkStatus;
 	}
 
-	public void setCondition(String condition) {
-		this.condition = condition;
+	public void setCheckStatus(String checkStatus) {
+		this.checkStatus = checkStatus;
 	}
 
 	public Integer getStudentNumber() {
