@@ -20,7 +20,7 @@ import java.net.http.HttpResponse;
  * @since 2023-04-15
  */
 @RestController
-@RequestMapping("/accountManagement")
+@RequestMapping("training_system/enterprise/accountManagement")
 public class AccountManagementController {
     @Autowired
     private AccountManagement accountManagement;
