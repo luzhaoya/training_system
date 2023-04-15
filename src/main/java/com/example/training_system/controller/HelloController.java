@@ -16,7 +16,7 @@ public class HelloController {
     public String x1() {
         var hello = new Hello();
         hello.setId(1);
-        hello.setName("傻逼");
+        hello.setName("傻逼2");
         return JsonUtil.get().assemble(hello);
     }
 
