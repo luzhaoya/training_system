@@ -1,9 +1,6 @@
 package com.example.training_system.util;
 
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.IOException;
-import java.io.RandomAccessFile;
+import java.io.*;
 import java.net.URLDecoder;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Paths;
@@ -14,7 +11,7 @@ import java.util.*;
 
 public class MyCodeBuilder {
 
-    public static void main(String[] args) throws ClassNotFoundException, SQLException {
+    public static void main(String[] args) throws ClassNotFoundException, SQLException, UnsupportedEncodingException {
         var map = new HashMap<String, String>();
         map.put("driver", "com.mysql.cj.jdbc.Driver");
         map.put("url", "jdbc:mysql://localhost:3306/training_system");
@@ -266,8 +263,8 @@ public class MyCodeBuilder {
      * @param path
      * @return
      */
-    public MyCodeBuilder setPath(String path) {
-        path = URLDecoder.decode(path, StandardCharsets.UTF_8).replace("\\", "/");
+    public MyCodeBuilder setPath(String path) throws UnsupportedEncodingException {
+        path = URLDecoder.decode(path, String.valueOf(StandardCharsets.UTF_8)).replace("\\", "/");
         if (null == Paths.get(path)) {
             throw new RuntimeException(path+"路径不存在");
         }

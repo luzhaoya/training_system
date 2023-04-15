@@ -6,4 +6,5 @@ package com.example.training_system.service.enterprise;
  * @since 2023-04-15
  */
 public interface EnterpriseCurriculumInformation {
+
 }
