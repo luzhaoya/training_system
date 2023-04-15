@@ -10,8 +10,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 @SpringBootTest
 class TrainingSystemApplicationTests {
 
-//    @Autowired
-//    private AccountManagement accountManagement;
+    @Autowired
+    private AccountManagement accountManagement;
     @Autowired
     private AccountManagementDAO accountManagementDAO;
     @Test
@@ -20,9 +20,8 @@ class TrainingSystemApplicationTests {
         account.setAccount("123456");
         account.setPassword("123456");
         account.setRole("学生");
-//        System.out.println(accountManagement.register(account));
 
-        accountManagementDAO.insert(account);
+        System.out.println(accountManagement.register(account));
     }
 
 }

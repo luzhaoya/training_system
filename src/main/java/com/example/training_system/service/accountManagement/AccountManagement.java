@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
  * @author wangtieliang
  * @since 2023-04-15
  */
-@Service
 public interface AccountManagement {
 
     /**
